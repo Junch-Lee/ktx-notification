@@ -1,6 +1,10 @@
 import os
 import requests
+import korail2
 from korail2 import Korail, AdultPassenger
+
+# 코레일 앱 최신 버전 정보 패치 (NameError 해결)
+korail2.korail.KORAIL_MOBILE_VERSION = "240101001"
 
 # 1. 환경변수 로드
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
@@ -15,8 +19,6 @@ DATE = "20260924"         # 출발일자 (YYYYMMDD)
 TIME_START = "050000"     # 조회 시작 시간 (HHMMSS)
 TIME_END = "180000"       # 조회 종료 시간 (HHMMSS)
 
-# 코레일 앱 최신 버전 정보로 패치 (MACRO ERROR 회피)
-korail2.korail2.KORAIL_MOBILE_VERSION = "240101001" # 필요시 최신 버전 문자열로 적용
 
 def send_telegram_msg(message):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
