@@ -47,7 +47,8 @@ def check_seats():
             if TIME_START <= train_time <= TIME_END:
                 # 좌석 유무 확인 (예약 시도 없이 조회만 진행)
                 if train.has_seat():
-                    info = f"🚆 [{train.train_name}] {train.dep_name}({train.dep_time[:2]}:{train.dep_time[2:4]}) -> {train.arr_name}({train.arr_time[:2]}:{train.arr_time[2:4]}) - 잔여석 있음!"
+                    # train_name 대신 train_type_name(열차종류)과 train_no(열차번호) 사용
+                    info = f"🚆 [{train.train_type_name} {train.train_no}호] {train.dep_name}({train.dep_time[:2]}:{train.dep_time[2:4]}) -> {train.arr_name}({train.arr_time[:2]}:{train.arr_time[2:4]}) - 잔여석 있음!"
                     available_trains.append(info)
 
         if available_trains:
