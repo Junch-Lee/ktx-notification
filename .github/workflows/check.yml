@@ -26,6 +26,7 @@ jobs:
 
       - name: Run KTX Check Script
         env:
+          TZ: Asia/Seoul # KST 시간대 설정 추가
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
           KORAIL_ID: ${{ secrets.KORAIL_ID }}
