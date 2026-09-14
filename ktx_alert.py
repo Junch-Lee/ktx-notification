@@ -3,9 +3,6 @@ import requests
 import korail2
 from korail2 import Korail, AdultPassenger
 
-# 코레일 앱 최신 버전 정보 패치 (NameError 해결)
-korail2.Korail.KORAIL_MOBILE_VERSION = "240101001"
-
 # 1. 환경변수 로드
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
