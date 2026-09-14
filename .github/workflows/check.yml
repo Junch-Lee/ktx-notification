@@ -2,8 +2,8 @@ name: KTX Seat Alert Workflow
 
 on:
   schedule:
-    # 5→3분 간격 자동 실행 (UTC 기준)
-    - cron: '*/3 * * * *'
+    # 5분 간격 자동 실행 (UTC 기준)
+    - cron: '*/5 * * * *'
   # GitHub 앱이나 웹페이지에서 수동으로 테스트 실행 가능
   workflow_dispatch:
 
