@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install korail2 requests
+          pip install --upgrade korail2 requests
 
       - name: Run KTX Check Script
         env:
