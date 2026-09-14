@@ -12,7 +12,7 @@ KORAIL_PW = os.environ.get("KORAIL_PW")
 # 2. 조회 조건 설정 (본인에 맞게 수정)
 DEP_STATION = "용산"       # 출발역
 ARR_STATION = "목포"       # 도착역
-DATE = "20260914"         # 출발일자 (YYYYMMDD)
+DATE = "20260924"         # 출발일자 (YYYYMMDD)
 TIME_START = "050000"     # 조회 시작 시간 (HHMMSS)
 TIME_END = "180000"       # 조회 종료 시간 (HHMMSS)
 
